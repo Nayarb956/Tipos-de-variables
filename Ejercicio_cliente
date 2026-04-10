@@ -1,0 +1,19 @@
+#Crear un programa que solicite los datos del cliente usando input(), si esta activo o no, su edad y si tiene cedula. Guardar cada dato en una variable y mostrar la informacion organizada
+
+
+id_cliente = int(input("Ingrese el ID del cliente: "))
+nombre = input("Ingrese el nombre del cliente: ")
+numero_telefono = input("Ingrese el número de teléfono del cliente: ")
+activo = input("¿El cliente está activo? (Si/No): ")
+edad = int(input("Ingrese la edad del cliente: "))
+tiene_cedula = (False if edad < 18 else True) and (input("¿El cliente tiene cédula? (Si/No): ") == "Si" if edad == 18 else True)
+numero_identificacion = input("Ingrese el número de identificación del cliente: ") if tiene_cedula else "No tiene cédula"
+    
+print("\nInformación del cliente:")
+print(f"ID: {id_cliente}")
+print(f"Nombre: {nombre}")
+print(f"Teléfono: {numero_telefono}")
+print(f"Activo: {activo}")
+print(f"Edad: {edad}")
+print(f"Tiene cédula: {tiene_cedula}")
+print(f"Número de identificación: {numero_identificacion}")
